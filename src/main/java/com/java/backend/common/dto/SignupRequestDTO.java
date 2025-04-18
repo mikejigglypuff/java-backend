@@ -1,5 +1,10 @@
 package com.java.backend.common.dto;
 
-public class SignupRequestDTO {
+public record SignupRequestDTO(
+        String memberType,
+        String email,
+        String nickname,
+        String password
+) {
 
 }

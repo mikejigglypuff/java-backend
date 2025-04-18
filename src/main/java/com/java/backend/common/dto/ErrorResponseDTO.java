@@ -1,6 +1,7 @@
 package com.java.backend.common.dto;
 
-public record SignupResponseDTO(
+public record ErrorResponseDTO(
+        String code,
         String message
 ) {
 

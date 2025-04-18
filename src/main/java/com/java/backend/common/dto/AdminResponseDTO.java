@@ -1,5 +1,8 @@
 package com.java.backend.common.dto;
 
-public class AdminResponseDTO {
+public record AdminResponseDTO(
+        String email,
+        String nickname
+) {
 
 }

@@ -1,5 +1,7 @@
 package com.java.backend.common.dto;
 
-public class LoginResponseDTO {
+public record LoginResponseDTO(
+        String token
+) {
 
 }

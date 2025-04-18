@@ -1,5 +1,8 @@
 package com.java.backend.common.dto;
 
-public class LoginRequestDTO {
+public record LoginRequestDTO(
+        String nickname,
+        String password
+) {
 
 }

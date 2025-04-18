@@ -21,6 +21,7 @@ public class RoleController {
     public ResponseEntity<UserResponseDTO> getProfile(
             @AuthenticationPrincipal AuthUser authUser
     ) {
+        System.out.println("authUser: " + authUser.toString());
         return ResponseEntity.ok(userService.getProfile(authUser.nickname()));
     }
 

@@ -13,6 +13,7 @@ public class AuthUserAuthenticationToken extends AbstractAuthenticationToken {
     ) {
         super(authorities);
         this.principal = authUser;
+        setAuthenticated(true);
     }
 
     @Override

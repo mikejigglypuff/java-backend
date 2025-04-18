@@ -4,10 +4,12 @@ import com.java.backend.common.exception.CustomException;
 import com.java.backend.domain.User;
 import java.util.HashMap;
 import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class MemoryUserRepository implements UserRepository {
     private final Map<String, User> userMap = new HashMap<>();
 

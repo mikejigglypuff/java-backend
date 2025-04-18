@@ -12,6 +12,7 @@ public enum MemberType {
     USER,
     ADMIN;
 
+
     public static MemberType of(String role) {
         return Arrays.stream(MemberType.values())
                 .filter(r -> r.name().equalsIgnoreCase(role))

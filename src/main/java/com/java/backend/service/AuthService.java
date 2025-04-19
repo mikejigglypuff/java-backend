@@ -17,7 +17,7 @@ public class AuthService {
     public String login(String nickname, String password) {
         User loginUser = userRepository.find(nickname);
         if(!password.equals(loginUser.getPassword())) {
-            throw new CustomException(HttpStatus.BAD_REQUEST, "LOGIN_FAILURE", "닉네임 또는 비밀번호가 잘못되었습니다.");
+            throw new CustomException(HttpStatus.BAD_REQUEST, "LOGIN_FAILURE", "비밀번호가 잘못되었습니다.");
         }
         return jwtUtil.createToken(nickname, loginUser.getEmail(), loginUser.getMemberType());
     }

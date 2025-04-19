@@ -85,6 +85,6 @@ public class LoginTests {
 
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
         assertEquals("LOGIN_FAILURE", response.getBody().code());
-        assertEquals("닉네임 또는 비밀번호가 잘못되었습니다.", response.getBody().message());
+        assertEquals("비밀번호가 잘못되었습니다.", response.getBody().message());
     }
 }

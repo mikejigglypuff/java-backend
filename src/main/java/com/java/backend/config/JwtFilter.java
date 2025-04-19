@@ -2,6 +2,7 @@ package com.java.backend.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.java.backend.common.enums.MemberType;
+import com.java.backend.common.enums.UriWhiteList;
 import com.java.backend.domain.AuthUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -38,7 +39,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         String url = request.getRequestURI();
 
-        if (url.startsWith("/auth")) {
+        if (UriWhiteList.isWhiteList(url)) {
             chain.doFilter(request, response);
             return;
         }

@@ -26,4 +26,8 @@ public class MemoryUserRepository implements UserRepository {
         }
         return userMap.get(nickname);
     }
+
+    public void clear() {
+        userMap.clear();
+    }
 }

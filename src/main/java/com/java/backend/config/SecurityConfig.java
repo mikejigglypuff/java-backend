@@ -22,7 +22,7 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**", "/error",
                                 "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .requestMatchers("/role/user").hasRole(MemberType.USER.name())
-                        .requestMatchers("/role/admin").hasRole(MemberType.ADMIN.name())
+                        .requestMatchers("/role/admin/**").hasRole(MemberType.ADMIN.name())
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
